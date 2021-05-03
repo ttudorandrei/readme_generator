@@ -1,4 +1,6 @@
+//this function will generate the text in the file based on user input
 const generateMarkdown = (data) => {
+  //destructured data object
   const {
     title,
     badge,
@@ -12,8 +14,9 @@ const generateMarkdown = (data) => {
     github,
   } = data;
 
+  //code to dynamically construct GitHub profile URL
   const githubProfile = `https://github.com/${github}`;
-  console.log("hello generated markdown");
+
   return `# ${title}
   ![${badge}](https://img.shields.io/badge/license-${badge}-green)
 
@@ -52,4 +55,5 @@ const generateMarkdown = (data) => {
   - GitHub at <${githubProfile}>`;
 };
 
+// exports the generateMarkdown function
 module.exports = generateMarkdown;

@@ -1,3 +1,4 @@
+//required modules
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
@@ -83,8 +84,10 @@ const questions = [
   },
 ];
 
+//function to prompt the user
 const promptUser = () => inquirer.prompt(questions);
 
+//this will prompt the user with the questions, collect the answers and generates the .md file with the answers collected
 const init = async () => {
   try {
     const answers = await promptUser();
