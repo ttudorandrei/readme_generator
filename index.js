@@ -1,11 +1,23 @@
-// TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 const generateMarkdown = require("./utils/generateMarkdown.js");
+const createGeneratedFile = util.promisify(fs.writeFile);
 
-// TODO: Create an array of questions for user input
 const questions = [
+  {
+    type: "input",
+    message: "Please Choose a file name",
+    name: "filename",
+  },
+
+  {
+    type: "list",
+    message: "Please choose a file extension",
+    name: "extension",
+    choices: ["md", "txt"],
+  },
+
   {
     type: "input",
     message: "Please type in the title of your project",
@@ -41,7 +53,7 @@ const questions = [
     type: "input",
     message:
       "Please provide a description of the badge used for this application:",
-    name: "lincense",
+    name: "license",
   },
 
   {
@@ -73,17 +85,12 @@ const questions = [
 
 const promptUser = () => inquirer.prompt(questions);
 
-// TODO: Create a function to write README file
-const writeToFile = (fileName, data) => {};
-
-// TODO: Create a function to initialize app
 const init = async () => {
-  console.log(questions);
-
   try {
     const answers = await promptUser();
-    generateMarkdown(answers);
-    console.log();
+    const generatedData = generateMarkdown(answers);
+    await createGeneratedFile("GENERATED_README.md", generatedData);
+    console.log("The file was SUCCESSFULLY generated!");
   } catch (err) {
     console.log(err);
   }
