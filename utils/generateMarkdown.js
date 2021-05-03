@@ -21,7 +21,7 @@ const generateMarkdown = (data) => {
   ![${badge}](https://img.shields.io/badge/license-${badge}-green)
 
   ## Description
-    ${description}
+  ${description}
 
   ## Table of Contents
   - [Description](#Description)
@@ -34,20 +34,20 @@ const generateMarkdown = (data) => {
 
   
   ## Usage
-    ${usage}
+  ${usage}
     
   ## Installation
-    ${installation}
+  ${installation}
   
   ## License
-    ${badge}
-    ${license}
+  ${badge}
+  ${license}
   
   ## Contributors
-    ${contributors}
+  ${contributors}
     
   ## Tests
-    ${test}
+  ${test}
     
   ## Questions
   If you have any questions regarding this app, please contact me via:
