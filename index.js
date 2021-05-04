@@ -84,15 +84,15 @@ const questions = [
   },
 ];
 
-//function to prompt the user
-const promptUser = () => inquirer.prompt(questions);
-
 //this will prompt the user with the questions, collect the answers and generates the .md file with the answers collected
 const init = async () => {
   try {
-    const answers = await promptUser();
+    const answers = await inquirer.prompt(questions);
     const generatedData = generateMarkdown(answers);
-    await createGeneratedFile("GENERATED_README.md", generatedData);
+    await createGeneratedFile(
+      `${answers.filename}.${answers.extension}`,
+      generatedData
+    );
     console.log("The file was SUCCESSFULLY generated!");
   } catch (err) {
     console.log(err);
