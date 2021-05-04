@@ -62,13 +62,14 @@ const questions = [
     message:
       "If applicable, please type in all the contributors on this project:",
     name: "contributors",
+    default: "Not applicable",
   },
 
   {
     type: "input",
-    message:
-      "Please provide any test instructions. If not applicable, leave blank.",
+    message: "Please provide any test instructions.",
     name: "test",
+    default: "Not applicable",
   },
 
   {
