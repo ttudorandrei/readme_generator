@@ -60,6 +60,19 @@ const questions = [
   {
     type: "input",
     message:
+      "Please please add a link of a screenshot that captures your working application:",
+    name: "screenshot",
+  },
+
+  {
+    type: "input",
+    message: "Please type in the Alt-Text for the screenshot",
+    name: "altText",
+  },
+
+  {
+    type: "input",
+    message:
       "If applicable, please type in all the contributors on this project:",
     name: "contributors",
     default: "Not applicable",
