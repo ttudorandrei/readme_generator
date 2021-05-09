@@ -60,13 +60,14 @@ const questions = [
   {
     type: "input",
     message:
-      "Please please add a link of a screenshot that captures your working application:",
+      "Please please add a link of a screenshot that captures your working application (if not available, press enter):",
     name: "screenshot",
   },
 
   {
     type: "input",
-    message: "Please type in the Alt-Text for the screenshot",
+    message:
+      "Please type in the Alt-Text for the screenshot (if not available, press enter):",
     name: "altText",
   },
 
