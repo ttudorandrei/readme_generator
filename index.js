@@ -107,7 +107,7 @@ const init = async () => {
       `${answers.filename}.${answers.extension}`,
       generatedData
     );
-    console.log("The file was SUCCESSFULLY generated!");
+    console.info("The file was SUCCESSFULLY generated!");
   } catch (err) {
     console.log(err);
   }

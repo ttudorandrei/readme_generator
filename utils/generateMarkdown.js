@@ -19,6 +19,15 @@ const generateMarkdown = (data) => {
   //code to dynamically construct GitHub profile URL
   const githubProfile = `https://github.com/${github}`;
 
+  const isScreenshot = () => {
+    let screenshotSection;
+    if (!altText || !screenshot) {
+      return (screenshotSection = "");
+    } else {
+      return (screenshotSection = `## Screenshot
+  ![${altText}](${screenshot})`);
+    }
+  };
   return `# ${title}
   ![${badge}](https://img.shields.io/badge/license-${badge}-green)
 
@@ -39,19 +48,17 @@ const generateMarkdown = (data) => {
   ${usage}
     
   ## Installation
-  ${installation}
+    ${installation}
   
   ## License
   ${badge}
   ${license}
-
-  ## Screenshot
-  ![${altText}](${screenshot})
-  
   
   ## Contributors
   ${contributors}
     
+  ${isScreenshot()}
+
   ## Tests
   ${test}
     
