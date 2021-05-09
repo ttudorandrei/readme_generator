@@ -19,6 +19,12 @@ Upon answering all questions, a file will be generated, containing all of the in
 
 ## Link to Video Recording
 
+You can view the Video Recording [here](https://drive.google.com/file/d/11MIYmD8kH1l8thhMBGLFHhHYEeqUvOWN/view?usp=sharing)
+
 ## Link to GitHub repository
 
 You can view the GitHub Repository [here](https://github.com/ttudorandrei/readme_generator)
+
+## Link to the Generated Readme
+
+You can view the Generated Readme file [here](https://github.com/ttudorandrei/readme_generator/blob/master/MY_README.md)
