@@ -22,6 +22,7 @@ const generateMarkdown = (data) => {
   //this snippet will add the screenshot section if the associated fields are completed. If skipped, the section will not be added
   const isScreenshot = () => {
     let screenshotSection;
+
     if (!altText || !screenshot) {
       return (screenshotSection = "");
     } else {
@@ -29,11 +30,22 @@ const generateMarkdown = (data) => {
   ![${altText}](${screenshot})`);
     }
   };
+
+  const tableOfContentsScreenshotSection = () => {
+    let screenshotLink;
+
+    if (!altText || !screenshot) {
+      return (screenshotLink = "");
+    } else {
+      return (screenshotLink = `- [Screenshot](#Screenshot)`);
+    }
+  };
+
   return `# ${title}
   ![${badge}](https://img.shields.io/badge/license-${badge}-green)
 
   ## Description
-        ${description}
+  ${description}
 
   ## Table of Contents
   - [Description](#Description)
@@ -41,6 +53,7 @@ const generateMarkdown = (data) => {
   - [Installation](#Installation)
   - [License](#License)
   - [Contributors](#Contributors)
+  ${tableOfContentsScreenshotSection()}
   - [Tests](#Tests)
   - [Questions](#Questions)
 
