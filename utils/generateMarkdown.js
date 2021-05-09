@@ -32,7 +32,7 @@ const generateMarkdown = (data) => {
   ![${badge}](https://img.shields.io/badge/license-${badge}-green)
 
   ## Description
-  ${description}
+        ${description}
 
   ## Table of Contents
   - [Description](#Description)
@@ -48,7 +48,7 @@ const generateMarkdown = (data) => {
   ${usage}
     
   ## Installation
-    ${installation}
+  ${installation}
   
   ## License
   ${badge}
