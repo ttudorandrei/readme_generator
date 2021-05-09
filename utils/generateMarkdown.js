@@ -19,6 +19,7 @@ const generateMarkdown = (data) => {
   //code to dynamically construct GitHub profile URL
   const githubProfile = `https://github.com/${github}`;
 
+  //this snippet will add the screenshot section if the associated fields are completed. If skipped, the section will not be added
   const isScreenshot = () => {
     let screenshotSection;
     if (!altText || !screenshot) {
@@ -48,7 +49,8 @@ const generateMarkdown = (data) => {
   ${usage}
     
   ## Installation
-  ${installation}
+  \`\`\`${installation}\`\`\`
+  
   
   ## License
   ${badge}
