@@ -14,6 +14,8 @@ Upon answering all questions, a file will be generated, containing all of the in
 
 ## Getting Started
 
+- clone repository into your machine
+- cd into repository
 - run `npm install` in node
 - to run the script simply type in the terminal `node` and the name of the script you want ro run, in this case `node index.js`
 
