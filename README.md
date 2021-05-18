@@ -19,7 +19,7 @@ Upon answering all questions, a file will be generated, containing all of the in
 
 ## Link to Video Recording
 
-You can view the Video Recording [here](https://drive.google.com/file/d/11MIYmD8kH1l8thhMBGLFHhHYEeqUvOWN/view?usp=sharing)
+You can view the Video Recording [here](https://drive.google.com/file/d/1vi_CByBWTIsLtiD_xluY7AAbdXBickA3/view?usp=sharing)
 
 ## Link to GitHub repository
 
