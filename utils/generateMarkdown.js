@@ -21,23 +21,19 @@ const generateMarkdown = (data) => {
 
   //this snippet will add the screenshot section if the associated fields are completed. If skipped, the section will not be added
   const isScreenshot = () => {
-    let screenshotSection;
-
     if (!altText || !screenshot) {
-      return (screenshotSection = "");
+      return "";
     } else {
-      return (screenshotSection = `## Screenshot
-  ![${altText}](${screenshot})`);
+      return `## Screenshot
+  ![${altText}](${screenshot})`;
     }
   };
 
-  const tableOfContentsScreenshotSection = () => {
-    let screenshotLink;
-
+  const isTableOfContentsScreenshotSection = () => {
     if (!altText || !screenshot) {
-      return (screenshotLink = "");
+      return "";
     } else {
-      return (screenshotLink = `- [Screenshot](#Screenshot)`);
+      return `- [Screenshot](#Screenshot)`;
     }
   };
 
@@ -53,7 +49,7 @@ const generateMarkdown = (data) => {
   - [Installation](#Installation)
   - [License](#License)
   - [Contributors](#Contributors)
-  ${tableOfContentsScreenshotSection()}
+  ${isTableOfContentsScreenshotSection()}
   - [Tests](#Tests)
   - [Questions](#Questions)
 
